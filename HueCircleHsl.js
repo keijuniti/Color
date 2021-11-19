@@ -174,8 +174,8 @@ addEventListener('click', e =>{
 
     
     //カーソルがcanvas内にあるときカーソルの位置と円の中心との距離を計算する
-    if(rect.left === rectLeft && rect.top === rectTop){
-        const distance = Math.sqrt(Math.pow(x - canvasX, 2) + Math.pow(y - canvasY, 2));
+    if(Math.floor(rect.left*Math.pow(10,2))/Math.pow(10,2) === rectLeft && rect.top === rectTop){
+    const distance = Math.sqrt(Math.pow(x - canvasX, 2) + Math.pow(y - canvasY, 2));
             
         //カーソルが色の範囲内にあるとき
         if(radius/2 <= distance && distance <= radius){
